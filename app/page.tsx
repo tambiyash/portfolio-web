@@ -1,0 +1,19 @@
+import Navbar from "@/components/navbar";
+import Hero from "@/components/hero";
+import Features from "@/components/features";
+import TechStack from "@/components/tech-stack";
+import CurrentProject from "@/components/current-project";
+import ContactSection from "@/components/contact-section";
+
+export default function Home() {
+  return (
+    <main className="min-h-screen bg-black">
+      <Navbar />
+      <Hero />
+      <Features />
+      <TechStack />
+      <CurrentProject />
+      <ContactSection />
+    </main>
+  )
+}
