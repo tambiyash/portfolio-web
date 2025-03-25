@@ -30,7 +30,7 @@ export default function ContactSection() {
               Do you want to start <br />a project together?
             </h2>
             <p className="text-gray-400 mb-8">
-              I'm always open to discussing new projects, creative ideas or opportunities to be part of your vision.
+              I&#39;m always open to discussing new projects, creative ideas or opportunities to be part of your vision.
             </p>
             <Button
               handleClick={copyEmail}
@@ -51,7 +51,7 @@ export default function ContactSection() {
             className="flex items-center justify-center"
           >
             <div className="w-full max-w-md p-8 rounded-2xl bg-gradient-to-br from-purple-900/10 to-black border border-purple-900/20">
-              <h3 className="text-xl font-bold mb-4">Let's Connect</h3>
+              <h3 className="text-xl font-bold mb-4">Let&#39;s Connect</h3>
               <p className="text-gray-400 mb-6">Feel free to reach out through any of these platforms:</p>
               <div className="space-y-4">
                 <div className="flex items-center gap-3 p-3 rounded-lg hover:bg-white/5 transition-colors">

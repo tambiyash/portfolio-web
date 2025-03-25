@@ -53,15 +53,15 @@ export default function CurrentProject() {
             <CardItem as="p" translateZ="60" className="text-neutral-300 text-sm max-w-sm mt-2 dark:text-neutral-300">
               <div className="mt-4 space-y-6">
                 <div className="text-pink-500">
-                  <div className="mb-1 text-xs text-gray-400">// Line 1</div>
+                  <div className="mb-1 text-xs text-gray-400">{"// Line 1"}</div>
                   <CodeBlock text={codeString1} language="javascript" showLineNumbers={false} theme={dracula} />
                 </div>
                 <div className="text-pink-500">
-                  <div className="mb-1 text-xs text-gray-400">// Line 2</div>
+                  <div className="mb-1 text-xs text-gray-400">{"// Line 2"}</div>
                   <CodeBlock text={codeString2} language="javascript" showLineNumbers={false} theme={dracula} />
                 </div>
                 <div className="text-pink-500">
-                  <div className="mb-1 text-xs text-gray-400">// Line 3</div>
+                  <div className="mb-1 text-xs text-gray-400">{"// Line 3"}</div>
                   <CodeBlock text={codeString3} language="javascript" showLineNumbers={false} theme={dracula} />
                 </div>
               </div>
