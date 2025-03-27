@@ -78,7 +78,6 @@ export const CardBody = ({
 }
 
 export const CardItem = ({
-  as: Tag = "div",
   children,
   className,
   translateX = 0,
@@ -112,9 +111,9 @@ export const CardItem = ({
   }, [isMouseEntered, translateX, translateY, translateZ, rotateX, rotateY, rotateZ])
 
   return (
-    <Tag ref={ref} className={cn("w-fit transition duration-200 ease-linear", className)} {...rest}>
+    <div ref={ref} className={cn("w-fit transition duration-200 ease-linear", className)} {...rest}>
       {children}
-    </Tag>
+    </div>
   )
 }
 
