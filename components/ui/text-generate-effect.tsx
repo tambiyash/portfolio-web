@@ -1,6 +1,6 @@
 "use client"
 import { useEffect, useState } from "react"
-import { motion } from "framer-motion"
+import { motion } from "motion/react"
 
 export const TextGenerateEffect = ({ words }: { words: string }) => {
   const [wordArray, setWordArray] = useState<string[]>([])

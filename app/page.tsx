@@ -4,14 +4,16 @@ import Features from "@/components/features";
 import TechStack from "@/components/tech-stack";
 import CurrentProject from "@/components/current-project";
 import ContactSection from "@/components/contact-section";
+import { navItems } from "@/data";
 
 export default function Home() {
   return (
     <main className="min-h-screen bg-black">
-      <Navbar />
+      <Navbar navItems={navItems}/>
       <Hero />
       <Features />
       <TechStack />
+      <TechStack otherSkill/>
       <CurrentProject />
       <ContactSection />
     </main>

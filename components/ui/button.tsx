@@ -1,21 +1,28 @@
 "use client"
 import React from 'react'
 
-const Button = ({
+type PolymorphicProps<E extends React.ElementType> = React.PropsWithChildren<React.ComponentPropsWithoutRef<E> & {as?: E}>
+
+type ButtonProps<T extends React.ElementType> = PolymorphicProps<T> & {
+  title: string;
+  icon?: React.ReactNode;
+  position?: string;
+  handleClick?: () => void;
+  otherClasses?: string;
+}
+
+function Button({
   title,
+  as,
   icon,
   position,
   handleClick,
   otherClasses,
-}: {
-  title: string;
-  icon: React.ReactNode;
-  position: string;
-  handleClick?: () => void;
-  otherClasses?: string;
-}) => {
+}: ButtonProps<"button" | "a">) {
+  const Component = as || 'button'
   return (
-    <button
+    <Component
+      {...(as ? {} : { type: 'button' })}
       className="relative inline-flex h-12 w-full md:w-60 md:mt-10 overflow-hidden rounded-lg p-[1px] focus:outline-none"
       onClick={handleClick}
     >
@@ -30,7 +37,7 @@ const Button = ({
         {title}
         {position === "right" && icon}
       </span>
-    </button>
+    </Component>
   );
 };
 
