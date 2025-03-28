@@ -3,12 +3,13 @@ import { motion } from "motion/react"
 import { TextGenerateEffect } from "@/components/ui/text-generate-effect"
 import Button from "@/components/ui/button"
 import { ArrowDown } from "lucide-react"
+import { BackgroundBeams } from "./ui/background-beams";
 
 export default function Hero() {
   const introText = "Hi! I'm Yash, a Frontend Developer and Product Owner/Manager."
 
   return (
-    <div className="h-[90vh] w-full bg-black flex flex-col items-center justify-center overflow-hidden rounded-md">
+    <div className="h-[90vh] w-full flex flex-col items-center justify-center overflow-hidden rounded-md">
       <div className="text-center z-10 px-6 md:px-10 py-24 max-w-5xl mx-auto">
         <motion.p
           initial={{ opacity: 0, y: 20 }}
@@ -43,16 +44,15 @@ export default function Hero() {
           transition={{ duration: 0.5, delay: 0.6 }}
         >
           <Button
-            as="a"
             otherClasses="bg-purple-600 hover:bg-purple-700 text-white rounded-md px-6 py-3 flex items-center gap-2 group"
-            href="./Yash-Resume.pdf"
-            download="resume.pdf"
+            onClick={() => window.open("/Yash-Resume.pdf", "download")}
             title="Download My Resume"
             icon={<ArrowDown className="w-4 h-4 group-hover:translate-x-1 transition-transform" />}
             position="right"
           />
         </motion.div>
       </div>
+      <BackgroundBeams />
     </div>
   )
 }

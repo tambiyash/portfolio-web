@@ -1,8 +1,7 @@
 "use client";
-import { motion } from "motion/react"
-import { CodeBlock, dracula } from "react-code-blocks"
-import { CardBody, CardContainer, CardItem } from "@/components/ui/3d-card"
-import { codeStrings } from "@/data";
+import { motion } from "motion/react";
+import { CodeBlock } from "@/components/ui/code-block";
+import { codeString } from "@/data";
 
 export default function CurrentProject() {
   return (
@@ -37,25 +36,21 @@ export default function CurrentProject() {
             using React, TailwindCSS and Motion.
           </motion.p>
         </div>
-        <CardContainer className="inter-var">
-              <CardBody className="bg-gray-900 relative group/card dark:hover:shadow-2xl dark:hover:shadow-purple-500/[0.1] dark:bg-black dark:border-white/[0.2] border-black/[0.1] w-auto sm:w-[30rem] h-auto rounded-xl p-6">
-                <CardItem translateZ="50" className="text-xl font-bold text-neutral-200 dark:text-white">
-                  Code Snippets
-                </CardItem>
-                <CardItem as="div" translateZ="60" className="text-neutral-300 text-sm max-w-sm mt-2 dark:text-neutral-300">
-                  <div className="mt-4 space-y-6">
-                    <div className="text-pink-500">
-                      <div className="mb-1 text-xs text-gray-400">{"// Line 1"}</div>
-                      <CodeBlock text={codeStrings[0]} language="javascript" showLineNumbers={false} theme={dracula} />
-                    </div>
-                    <div className="text-pink-500">
-                      <div className="mb-1 text-xs text-gray-400">{"// Line 2"}</div>
-                      <CodeBlock text={codeStrings[1]} language="javascript" showLineNumbers={false} theme={dracula} />
-                    </div>
-                  </div>
-                </CardItem>
-              </CardBody>
-            </CardContainer>
+        <motion.div
+          className="max-w-3xl mx-auto w-full"
+          transition={{ type: "spring", duration: 3 }}
+          initial={{ opacity: 0, x: "-100vh" }}
+          whileInView={{ opacity: 1, x: 0}}
+        >
+          <CodeBlock
+            language="jsx"
+            filename="ButtonComponent.jsx"
+            tabs={[
+              { name: "ButtonComponent.jsx", code: codeString[0], language: "jsx", highlightLines: [9, 13, 14, 18] },
+              { name: "button.css", code: codeString[1], language: "css", highlightLines: [1, 2, 3] }
+            ]}
+          />
+        </motion.div>
       </div>
     </div>
   )

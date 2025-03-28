@@ -2,6 +2,7 @@ import Navbar from "@/components/navbar";
 import Hero from "@/components/hero";
 import Features from "@/components/features";
 import TechStack from "@/components/tech-stack";
+import Projects from "@/components/projects";
 import CurrentProject from "@/components/current-project";
 import ContactSection from "@/components/contact-section";
 import { navItems } from "@/data";
@@ -14,6 +15,7 @@ export default function Home() {
       <Features />
       <TechStack />
       <TechStack otherSkill/>
+      <Projects />
       <CurrentProject />
       <ContactSection />
     </main>

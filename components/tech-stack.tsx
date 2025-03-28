@@ -1,7 +1,7 @@
 "use client";
 import { motion } from "motion/react"
 import { BackgroundGradient } from "@/components/ui/background-gradient"
-import { technologies, otherSkills } from "@/data";
+import { technologies, otherSkills, mapTechIcons } from "@/data";
 
 export default function TechStack({ otherSkill=false }: { otherSkill?: boolean}) {
   return (
@@ -37,7 +37,7 @@ export default function TechStack({ otherSkill=false }: { otherSkill?: boolean})
               >
                 <h4 className="flex-1/2 text-xl md:text-2xl font-bold text-white mb-2">{tech.name}</h4>
                 {tech.level && <p className="text-sm text-purple-400">{tech.level}</p>}
-                <span className="w-20 h-20 mt-2">{tech.icon!}</span>
+                <span className="w-20 h-20 mt-2">{mapTechIcons[tech.name]}</span>
               </motion.div>
             </BackgroundGradient>
           ))}
