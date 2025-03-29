@@ -4,7 +4,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { motion } from "motion/react";
 import { Globe } from 'lucide-react';
-import { mapTechIcons, projectsList, socials } from '@/data';
+import { projectsList, socials } from '@/data';
 import { CardContainer, CardBody, CardItem } from './ui/3d-card';
 import Button from './ui/button';
 import { BentoGrid } from './ui/bento-grid';
