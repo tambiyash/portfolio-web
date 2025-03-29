@@ -3,7 +3,8 @@ import React from 'react';
 import Link from "next/link";
 import Image from "next/image";
 import { motion } from "motion/react";
-import { projectsList, socials } from '@/data';
+import { Globe } from 'lucide-react';
+import { mapTechIcons, projectsList, socials } from '@/data';
 import { CardContainer, CardBody, CardItem } from './ui/3d-card';
 import Button from './ui/button';
 import { BentoGrid } from './ui/bento-grid';
@@ -49,7 +50,7 @@ const Projects = () => {
                                         src={project.img}
                                         height="1000"
                                         width="1000"
-                                        className="h-60 w-full object-cover rounded-xl group-hover/card:shadow-xl"
+                                        className="h-60 w- object-cover rounded-xl group-hover/card:shadow-xl"
                                         alt={project.name}
                                     />
                                 </CardItem>
@@ -59,10 +60,10 @@ const Projects = () => {
                                 >
                                     <Button
                                         onClick={() => handleButtonClick(project.name)}
-                                        href={`https://github.com/${socials.github}/${project.name}`}
-                                        target="_blank"
-                                        className=""
                                         title="View on Github"
+                                        icon={<Globe />}
+                                        position="left"
+                                        className=""
                                     />
                                 </CardItem>
                             </CardBody>

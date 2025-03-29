@@ -5,7 +5,7 @@ import { technologies, otherSkills, mapTechIcons } from "@/data";
 
 export default function TechStack({ otherSkill=false }: { otherSkill?: boolean}) {
   return (
-    <div className="py-20 relative">
+    <section id="skills" className="py-10 relative">
       <div className="max-w-5xl mx-auto px-4">
         <div className="text-center mb-16">
           <motion.p
@@ -43,6 +43,6 @@ export default function TechStack({ otherSkill=false }: { otherSkill?: boolean})
           ))}
         </div>
       </div>
-    </div>
+    </section>
   )
 }

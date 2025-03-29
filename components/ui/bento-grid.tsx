@@ -1,5 +1,6 @@
 "use client";
 import { useState } from "react";
+import Image from "next/image";
 import { Copy } from "lucide-react";
 import { cn } from "@/lib/utils";
 import GridGlobe from "./grid-globe";
@@ -93,7 +94,9 @@ const GridItem = ({
     <div className={`${id === 6 && "flex justify-center"} h-full`}>
       <div className="w-full h-full absolute">
         {img && (
-          <img
+          <Image
+            width={100}
+            height={100}
             src={img}
             alt={img}
             className={cn(imgClassName, "object-center ")}
@@ -104,7 +107,9 @@ const GridItem = ({
         className={`absolute right-0 -bottom-5 ${id === 5 && "w-full opacity-80"}`}
       >
         {spareImg && (
-          <img
+          <Image
+            width={100}
+            height={100}
             src={spareImg}
             alt={spareImg}     
             className="object-cover object-center w-full h-full"

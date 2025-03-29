@@ -1,5 +1,6 @@
 "use client"
 import type React from "react"
+import Image from "next/image";
 import { motion } from "motion/react"
 import Link from "next/link"
 import { cn } from "@/lib/utils"
@@ -75,7 +76,7 @@ type ProductItemProps = {
 export const ProductItem: React.FC<ProductItemProps> = ({ title, description, href, src }) => {
   return (
     <Link href={href} className="flex space-x-2">
-      <img
+      <Image
         src={src || "/placeholder.svg"}
         width={140}
         height={70}
