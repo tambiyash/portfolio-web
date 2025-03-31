@@ -10,7 +10,7 @@ import { AnimatedTestimonials } from "@/components/ui/animated-testimonials";
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-black">
+    <main className="relative bg-black-100 flex justify-center items-center flex-col mx-auto px-5 sm:px-10 overflow-clip">
       <Navbar navItems={navItems}/>
       <Hero />
       <Features />
