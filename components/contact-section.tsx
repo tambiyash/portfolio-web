@@ -11,7 +11,7 @@ export default function ContactSection() {
   const [copied, setCopied] = useState(false)
 
   const copyEmail = () => {
-    navigator.clipboard.writeText("your.email@example.com")
+    navigator.clipboard.writeText("tambiyash@gmail.com")
     setCopied(true)
     setTimeout(() => setCopied(false), 2000)
   }
